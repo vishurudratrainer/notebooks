@@ -1,0 +1,19 @@
+python 1.py -v
+
+python -m unittest -h
+
+python -m unittest test_mymath2.TestAdd.test_add_integers
+
+D:/py/python -m unittest discover
+
+D:/py/python -m pytest pyeg.py
+
+def setUp(self):
+        """
+        Setup a temporary object
+        """
+		
+		def tearDown(self):
+        """
+        clean up
+        """

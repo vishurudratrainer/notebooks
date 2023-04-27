@@ -1,0 +1,35 @@
+import matheg
+import unittest
+import sys
+ 
+class TestAdd(unittest.TestCase):
+    """
+    Test the add function from the mymath library
+    """
+    @unittest.skip('Skip this test')
+    def test_add_integers(self):
+        """
+        Test that the addition of two integers returns the correct total
+        """
+        result = matheg.add(1, 2)
+        self.assertEqual(result, 3)
+ 
+    def test_add_floats(self):
+        """
+        Test that the addition of two floats returns the correct result
+        """
+        result = matheg.add(10.5, 2)
+        self.assertEqual(result, 12.5)
+        
+    @unittest.skipUnless(sys.platform.startswith("win"), "requires Windows")
+    def test_add_strings(self):
+        """
+        Test the addition of two strings returns the two string as one
+        concatenated string
+        """
+        result = matheg.add('abc', 'def')
+        self.assertEqual(result, 'abcdef')
+ 
+ 
+if __name__ == '__main__':
+    unittest.main()
